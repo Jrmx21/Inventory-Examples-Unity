@@ -6,19 +6,24 @@ using UnityEngine.UI;
 
 public class BasicInventory : MonoBehaviour
 {
+    private List<ItemManagerSO> items;
     [SerializeField] private int inventorySlots = 4;
     [SerializeField] private Transform itemContainer;
-    [SerializeField] private GameObject itemPrefab;
-    public void AddItem(Image image)
+    void Start()
+    {
+        items = new List<ItemManagerSO>();
+    }
+
+    public void addItem(ItemManagerSO item)
     {
         if (itemContainer.childCount >= inventorySlots)
         {
             Debug.Log("Inventory is full");
             return;
         }
+        items.Add(item);
+        GameManager.Instance.HUD.addItem(item.icon);
         Debug.Log("Adding item to inventory");
-        GameObject item = Instantiate(itemPrefab, itemContainer);
 
-        item.GetComponent<Image>().sprite = image.sprite;
     }
 }

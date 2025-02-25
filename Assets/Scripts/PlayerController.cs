@@ -45,6 +45,12 @@ public class PlayerController : MonoBehaviour
         Sprite sprite = item.GetComponent<SpriteRenderer>().sprite;
         Image imgItem = new GameObject().AddComponent<Image>();
         imgItem.sprite = sprite;
-        basicInventory.AddItem(imgItem);
+        // basicInventory.AddItem(imgItem);
+    }
+
+    public void pickUpItemManager(ItemManagerSO item)
+    {
+        basicInventory.addItem(item);
+
     }
 }
