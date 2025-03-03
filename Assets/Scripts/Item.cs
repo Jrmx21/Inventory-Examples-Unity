@@ -9,6 +9,7 @@ public class Item : MonoBehaviour
     [SerializeField] private Image itemImage;
     [SerializeField] private TextMeshProUGUI itemName;
     [SerializeField] private TextMeshProUGUI itemPrice;
+    
 
     private int price;
     private Inventory inventory;

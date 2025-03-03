@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
@@ -12,6 +13,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private int maxNumberOfItems = 4;
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private TextMeshProUGUI coinsText;
+    [SerializeField] private string[] itemsBought;
 
     private int itemsNum;
 
@@ -24,13 +26,18 @@ public class Inventory : MonoBehaviour
     {
         if (price <= coins && itemsNum < maxNumberOfItems)
         {
+            if (itemsBought.Contains(itemName))
+            {
 
+                return;
+            }
             coins -= price;
             coinsText.text = coins.ToString() + "€";
             itemsNum++;
             GameObject item = Instantiate(itemPrefab, Vector2.zero, Quaternion.identity, transform);
             item.GetComponent<Image>().sprite = itemImage.sprite;
             item.GetComponentInChildren<TextMeshProUGUI>().text = itemName;
+            itemsBought.Append(itemName);
         }
     }
 }
