@@ -1343,6 +1343,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1a0720fbe6ec84842b94c8cea8fa27ca, type: 2}
   - {fileID: 11400000, guid: 946781a01b4bbf2439fc934c70aec93a, type: 2}
   - {fileID: 11400000, guid: f76158465d8d86d43980b098cca4912f, type: 2}
+  - {fileID: 11400000, guid: 0266b6d7c6e8b334088d77fa79098259, type: 2}
   itemsTemporalList: []
 --- !u!1 &2081954295
 GameObject:
@@ -1531,10 +1532,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2035670413}
     m_Modifications:
-    - target: {fileID: 6277846323415533921, guid: eccdcc2f8f8dfa646837e7951b407f2c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e9d4143c19529834981ac6821a04aecd, type: 3}
     - target: {fileID: 6454434420832894978, guid: eccdcc2f8f8dfa646837e7951b407f2c, type: 3}
       propertyPath: m_Name
       value: ShopItem

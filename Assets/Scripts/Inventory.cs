@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
         itemsNum = 0;
         coinsText.text = coins.ToString() + "€";
     }
-    public void AddItem(int price, Image itemImage)
+    public void AddItem(int price, Image itemImage, string itemName)
     {
         if (price <= coins && itemsNum < maxNumberOfItems)
         {
@@ -30,6 +30,7 @@ public class Inventory : MonoBehaviour
             itemsNum++;
             GameObject item = Instantiate(itemPrefab, Vector2.zero, Quaternion.identity, transform);
             item.GetComponent<Image>().sprite = itemImage.sprite;
+            item.GetComponentInChildren<TextMeshProUGUI>().text = itemName;
         }
     }
 }

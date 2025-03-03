@@ -20,6 +20,7 @@ public class ShopManager : MonoBehaviour
             item = itemShop.GetComponent<Item>();
             item.createItemFromTemplate(itemsTemporalList[index]);
             itemsTemporalList.RemoveAt(index);
+            
         }
     }
 }
