@@ -9,6 +9,7 @@ public class Item : MonoBehaviour
     [SerializeField] private Image itemImage;
     [SerializeField] private TextMeshProUGUI itemName;
     [SerializeField] private TextMeshProUGUI itemPrice;
+    [SerializeField] private Animator itemAnimator;
 
     // Dicionario itemsInInventory
     // Key: itemName
@@ -59,14 +60,13 @@ public class Item : MonoBehaviour
 
     public void onPointerEnter()
     {
-        itemImage.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
-        // animacion en textoprecio y nombre que se agrande y se achique cada segundo
+
+        itemAnimator.Play("MouseOver");
     }
 
     public void onPointerExit()
     {
-        itemImage.transform.localScale = new Vector3(1f, 1f, 1f);
-
+        itemAnimator.Play("Idle");
     }
     // TODO: rango de itemsNum
 }

@@ -44,7 +44,7 @@ public class Inventory : MonoBehaviour
 
             }
             // agrandar inventario en caso que lo necesite 
-            if (itemsNum >= maxNumberOfItems / 2)
+            if (itemsNum > maxNumberOfItems / 2)
             {
                 //    cambia grid row a 2
                 GridLayoutGroup grid = GetComponent<GridLayoutGroup>();
@@ -60,8 +60,6 @@ public class Inventory : MonoBehaviour
             }
             coins -= price;
             coinsText.text = coins.ToString() + "€";
-       
-
         }
 
     }

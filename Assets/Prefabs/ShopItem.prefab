@@ -282,6 +282,7 @@ GameObject:
   - component: {fileID: 626003034651025373}
   - component: {fileID: 5808644132144439203}
   - component: {fileID: 4677102799371139604}
+  - component: {fileID: 6948743495365084849}
   m_Layer: 5
   m_Name: ShopItem
   m_TagString: Untagged
@@ -419,6 +420,7 @@ MonoBehaviour:
   itemImage: {fileID: 6277846323415533921}
   itemName: {fileID: 1714711695384499417}
   itemPrice: {fileID: 5274794436529990318}
+  itemAnimator: {fileID: 6948743495365084849}
 --- !u!114 &4677102799371139604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,3 +466,24 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!95 &6948743495365084849
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6454434420832894978}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d374508ef3bc38449ba85fb6339827bf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
