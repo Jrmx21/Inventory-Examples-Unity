@@ -13,7 +13,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] private int maxNumberOfItems = 4;
     [SerializeField] private GameObject itemPrefab;
     [SerializeField] private TextMeshProUGUI coinsText;
-    [SerializeField] private string[] itemsBought;
+
 
     private int itemsNum;
 
@@ -22,22 +22,31 @@ public class Inventory : MonoBehaviour
         itemsNum = 0;
         coinsText.text = coins.ToString() + "€";
     }
-    public void AddItem(int price, Image itemImage, string itemName)
+    public void AddItem(int price, Image itemImage, string itemName, int itemNumber, bool isBought)
     {
+
         if (price <= coins && itemsNum < maxNumberOfItems)
         {
-            if (itemsBought.Contains(itemName))
+            if (isBought)
+            {
+                GameObject itemBought = transform.Find(itemName).gameObject;
+                itemBought.GetComponentInChildren<TextMeshProUGUI>().text = "x" + itemNumber.ToString();
+                Debug.Log("Item number: " + itemNumber);
+
+            }
+            else
             {
 
-                return;
+                GameObject item = Instantiate(itemPrefab, Vector2.zero, Quaternion.identity, transform);
+                item.name = itemName;
+                item.GetComponent<Image>().sprite = itemImage.sprite;
+                item.GetComponentInChildren<TextMeshProUGUI>().text = "x" + itemNumber.ToString();
+                itemsNum++;
             }
+
             coins -= price;
             coinsText.text = coins.ToString() + "€";
-            itemsNum++;
-            GameObject item = Instantiate(itemPrefab, Vector2.zero, Quaternion.identity, transform);
-            item.GetComponent<Image>().sprite = itemImage.sprite;
-            item.GetComponentInChildren<TextMeshProUGUI>().text = itemName;
-            itemsBought.Append(itemName);
         }
+
     }
 }
