@@ -236,10 +236,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9994b6bbc79598c4ca92b346a1d2eb1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 50
-  maxNumberOfItems: 4
+  coins: 200
+  maxNumberOfItems: 8
   itemPrefab: {fileID: 7061578598018765849, guid: 8ceb6392379a9194c95ddf95b11667f6, type: 3}
   coinsText: {fileID: 1563954397}
+  itemsNum: 0
 --- !u!224 &351227146 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5781923544275774205, guid: 8ceb6392379a9194c95ddf95b11667f6, type: 3}
@@ -659,9 +660,9 @@ RectTransform:
   - {fileID: 852589223}
   m_Father: {fileID: 2081954296}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 30}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -47}
   m_SizeDelta: {x: 313.2992, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1143832612
@@ -1177,10 +1178,10 @@ RectTransform:
   - {fileID: 1563954396}
   m_Father: {fileID: 2081954296}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 215, y: -148}
-  m_SizeDelta: {x: 195.8411, y: 53.4745}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -109, y: -71}
+  m_SizeDelta: {x: 195.84106, y: 53.4745}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1680308849
 MonoBehaviour:
@@ -1335,7 +1336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemPrefab: {fileID: 6454434420832894978, guid: eccdcc2f8f8dfa646837e7951b407f2c, type: 3}
-  maxNumberOfItems: 6
+  maxNumberOfItems: 8
   itemTemplatesArray:
   - {fileID: 11400000, guid: 429f1a844e6c3954fb345fc7313779cb, type: 2}
   - {fileID: 11400000, guid: c6fab5e47eeb06e4eac9de7909941c69, type: 2}
@@ -1344,6 +1345,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 946781a01b4bbf2439fc934c70aec93a, type: 2}
   - {fileID: 11400000, guid: f76158465d8d86d43980b098cca4912f, type: 2}
   - {fileID: 11400000, guid: 0266b6d7c6e8b334088d77fa79098259, type: 2}
+  - {fileID: 11400000, guid: 55bb96932d2385b4b9c634a8e73403cc, type: 2}
+  - {fileID: 11400000, guid: 41b42e79bf01b564d9ef4ae3475c0a8f, type: 2}
   itemsTemporalList: []
 --- !u!1 &2081954295
 GameObject:
@@ -1358,7 +1361,7 @@ GameObject:
   - component: {fileID: 2081954297}
   m_Layer: 5
   m_Name: InventoryContainer
-  m_TagString: Untagged
+  m_TagString: InventoryContainer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

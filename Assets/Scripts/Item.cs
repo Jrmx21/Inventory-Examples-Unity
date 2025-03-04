@@ -60,13 +60,13 @@ public class Item : MonoBehaviour
     public void onPointerEnter()
     {
         itemImage.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+        // animacion en textoprecio y nombre que se agrande y se achique cada segundo
     }
 
     public void onPointerExit()
     {
         itemImage.transform.localScale = new Vector3(1f, 1f, 1f);
+
     }
-    // TODO: resaltar on pointer, color o zoom
-    // TODO: X1, X2 ,X3 NUM items
     // TODO: rango de itemsNum
 }
