@@ -68,5 +68,5 @@ public class Item : MonoBehaviour
     {
         itemAnimator.Play("Idle");
     }
-    // TODO: rango de itemsNum
+
 }
